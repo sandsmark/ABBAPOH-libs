@@ -1,0 +1,7 @@
+include(bookmarks/bookmarks.pri)
+include(extensionsystem/extensionsystem.pri)
+include(filemanager/filemanager.pri)
+include(imageviewer/imageviewer.pri)
+include(io/io.pri)
+include(parts/parts.pri)
+include(widgets/widgets.pri)
