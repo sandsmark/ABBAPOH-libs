@@ -5,7 +5,7 @@ Library {
     name : "IO"
 
     Depends { id: qtcore; name: "Qt.core" }
-    Depends { name: "Qt"; submodules: ["widgets"] }
+    Depends { name: "Qt"; submodules: ["widgets", "core-private"] }
     Depends {
         condition: qbs.targetOS.contains("unix") && !qbs.targetOS.contains("osx")
         name: "Qt.dbus"
@@ -38,8 +38,6 @@ Library {
     cpp.defines: [ "IO_LIBRARY" ]
 
     files : [
-        "inqt5/qsystemerror.cpp",
-        "inqt5/qsystemerror_p.h",
         "directorydetails.cpp",
         "directorydetails.h",
         "fileimageprovider.cpp",
@@ -104,50 +102,4 @@ Library {
         ]
     }
 
-    Group {
-        name : "inqt5"
-        condition : qtcore.versionMajor < 5
-        files : [
-            "inqt5/qmimedatabase.cpp",
-            "inqt5/qmimedatabase.h",
-            "inqt5/qmimedatabase_p.h",
-            "inqt5/qmimeglobpattern.cpp",
-            "inqt5/qmimeglobpattern_p.h",
-            "inqt5/qmimemagicrule.cpp",
-            "inqt5/qmimemagicrule_p.h",
-            "inqt5/qmimemagicrulematcher.cpp",
-            "inqt5/qmimemagicrulematcher_p.h",
-            "inqt5/qmimeprovider.cpp",
-            "inqt5/qmimeprovider_p.h",
-            "inqt5/qmimetype.cpp",
-            "inqt5/qmimetype.h",
-            "inqt5/qmimetype_p.h",
-            "inqt5/qmimetypeparser.cpp",
-            "inqt5/qmimetypeparser_p.h",
-            "inqt5/qstandardpaths.cpp",
-            "inqt5/qstandardpaths.h",
-        ]
-    }
-    Group {
-        name : "intq5 mac files"
-        condition: qbs.targetOS.contains("osx") && qtcore.versionMajor < 5
-        files: [
-            "inqt5/qstandardpaths_mac.cpp"
-        ]
-    }
-    Group {
-        name : "inqt5 unix files"
-        condition: qbs.targetOS.contains("unix") && !qbs.targetOS.contains("osx")
-                   && qtcore.versionMajor < 5
-        files: [
-            "inqt5/qstandardpaths_unix.cpp"
-        ]
-    }
-    Group {
-        name : "inqt5 windows files"
-        condition: qbs.targetOS.contains("windows") && qtcore.versionMajor < 5
-        files: [
-            "inqt5/qstandardpaths_win.cpp"
-        ]
-    }
 }

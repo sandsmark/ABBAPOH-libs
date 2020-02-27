@@ -1,7 +1,7 @@
 #include "qdefaultprogram.h"
 #include "qdefaultprogram_p.h"
 
-#include <IO/QMimeDatabase>
+#include <QMimeDatabase>
 
 void QDefaultProgramPrivate::removeDuplicates(QDefaultProgramList &list)
 {

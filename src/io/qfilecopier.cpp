@@ -2,7 +2,7 @@
 
 #include <QtCore/QCoreApplication>
 #include <QtCore/QMetaType>
-#include <IO/QMimeDatabase>
+#include <QMimeDatabase>
 
 Q_DECLARE_METATYPE(QFileCopier::State)
 Q_DECLARE_METATYPE(QFileCopier::Error)

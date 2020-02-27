@@ -17,7 +17,7 @@
 #include <QtGui/QMessageBox>
 #endif
 
-#include <IO/QMimeDatabase>
+#include <QMimeDatabase>
 
 #include <qmath.h>
 
