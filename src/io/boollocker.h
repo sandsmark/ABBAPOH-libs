@@ -1,6 +1,8 @@
 #ifndef BOOLLOCKER_H
 #define BOOLLOCKER_H
 
+#include <QtGlobal>
+
 class BoolLocker
 {
 public:

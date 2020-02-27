@@ -1,9 +1,10 @@
 #include "kdesettings.h"
 
-#include <QtCore/QStringList>
-#include <QtCore/QRect>
-#include <QtCore/QTextCodec>
-#include <QtCore/QDebug>
+#include <QStringList>
+#include <QRect>
+#include <QTextCodec>
+#include <QDebug>
+#include <QDataStream>
 
 static const char hexDigits[] = "0123456789ABCDEF";
 

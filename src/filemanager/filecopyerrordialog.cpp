@@ -1,6 +1,8 @@
 #include "filecopyerrordialog.h"
 #include "ui_filecopyerrordialog.h"
 
+#include <QIcon>
+
 FileCopyErrorDialog::FileCopyErrorDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::FileCopyErrorDialog)
